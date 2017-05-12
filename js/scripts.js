@@ -1,3 +1,5 @@
+//Business logic
+
 function Pizza(size, topping) {
   this.selectedSize = size;
   this.selectedTopping = topping;
@@ -7,9 +9,12 @@ function Pizza(size, topping) {
 Pizza.prototype.orderSize = function() {
   return "You have selected a " + this.selectedSize + " size pizza.";
 }
+
 Pizza.prototype.orderTopping = function() {
   return "You have selected " + this.selectedTopping + " as a topping.";
 }
+
+//Front end logic
 $(document).ready(function() {
   $("#pizzaChoice").submit(function(event) {
   event.preventDefault();
