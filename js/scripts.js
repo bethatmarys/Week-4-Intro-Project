@@ -7,7 +7,7 @@ function Size(small, medium large){
 function Toppings(pepperoni, ham, pinapple){
   this.pepperoni = pepperoni;
   this.ham = ham;
-  this.pinapple = pinapple;
+  this.pinapple = sausage;
 }
 
 Size.prototype.pizzaSize = function() {
@@ -24,5 +24,5 @@ function resetFields() {
     $("input#large").val("")
     $("input#pepperoni").val("")
     $("input#ham").val("")
-    $("input#pinapple").val("")
+    $("input#sausage").val("")
 }
