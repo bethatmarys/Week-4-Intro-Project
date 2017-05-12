@@ -46,6 +46,6 @@ $("#results").show();
     $(".toppingChoice").text(newPizza.orderTopping());
     $(".price").text("$" + price + ".");
 //
-    // $(".toppingChoice").html("You have added " + topping + " topping to your pizza.");
+    $(".toppingChoice").html("You have added " + topping + " topping to your pizza.");
   });
 });
