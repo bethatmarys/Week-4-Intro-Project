@@ -1,31 +1,31 @@
-function Size(small, medium, large) {
-  this.small = small;
-  this.medium = medium;
-  this.large = large;
+function Pizza(size, topping) {
+  this.selectedSize = size;
+  this.selectedTopping = topping;
   }
 
-function Topping(pepperoni, ham, pinapple){
-  this.pepperoni = pepperoni;
-  this.ham = ham;
-  this.pinapple = sausage;
+// function Topping(pepperoni, ham, pinapple){
+//   this.pepperoni = pepperoni;
+//   this.ham = ham;
+//   this.pinapple = sausage;
+// }
+
+Pizza.prototype.orderPizza = function() {
+  return "You have chosen " + this.selectedSize + ".";
+  return "You have chosen " + this.selectedTopping + ".";
 }
 
-Size.prototype.pizzaSize = function() {
-  return "You have chosen " + "#selectSize" + ".";
-}
+// Topping.prototype.orderPizza = function() {
+//   return "You have chosen " + this.selectedTopping + ".";
+// }
 
-Topping.prototype.pizzaTopping = function() {
-  return "You have chosen " + "toppingChoice" + ".";
-}
-
-function resetFields() {
-    $("input#small").val("")
-    $("input#medium").val("")
-    $("input#large").val("")
-    $("input#pepperoni").val("")
-    $("input#ham").val("")
-    $("input#sausage").val("")
-}
+// function resetFields() {
+//     $("input#small").val("")
+//     $("input#medium").val("")
+//     $("input#large").val("")
+//     $("input#pepperoni").val("")
+//     $("input#ham").val("")
+//     $("input#sausage").val("")
+// }
 $(document).ready(function() {
   $("#pizzaChoice").submit(function(event) {
   event.preventDefault();
@@ -33,7 +33,7 @@ $(document).ready(function() {
   var size = $("select#selectSize").val();
   var topping = $("select#toppingChoice").val();
 
-  var newOrder = new Order(size, topping);
+  var newPizza = new Pizza(size, topping);
 
   var price = 10;
 
@@ -55,9 +55,9 @@ $(document).ready(function() {
 
 $("#results").show();
   // newTicket.movie.forEach(function(movie) {
-    $(".selectSize").text(newOrder.pizzaSize());
+    $(".selectSize").text(newPizza.orderPizza());
     $(".price").text("$" + price + ".");
-    $(".toppingChoice").text(pizzaOrder.toppingChoice());
+    $(".toppingChoice").text(newPizza.orderPizza());
     $(".price").text("$" + price + ".");
 
     $(".toppingChoice").html("You have chosen a " + "<b>" + topping +  "</b>" + " pizza.");
