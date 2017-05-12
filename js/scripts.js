@@ -19,7 +19,9 @@ $(document).ready(function() {
   var newPizza = new Pizza(size, topping);
   var price = 10;
 
-  if (size === "small") {
+  if (size === "blank") {
+    price += 0;
+  } else if (size === "small") {
     price += 1;
   } else if (size === "medium") {
     price += 5;
@@ -27,7 +29,9 @@ $(document).ready(function() {
     price += 10;
   }
 
-  if (topping === "pepperoni") {
+  if (topping === "blank") {
+    price += 0;
+  } else if (topping === "pepperoni") {
     price += 4;
   } else if (topping === "ham") {
     price += 2;

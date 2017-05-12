@@ -19,8 +19,9 @@
             <div class="col-md-3">
               <div class="well">
                 <div class="form-group">
-                  <h4>How hungry are you?</h4>
+                  <h3>How hungry are you?</h3>
                   <select class="form-control" id="selectSize">
+                    <option value="blank" id="blank">Choose a size</option>
                     <option value="small" id="Small">Small - 8 inch diameter</option>
                     <option value="medium" id="medium">Medium - 12 inch diameter</option>
                     <option value="large" id="large">Large - 16 inch diameter</option>
@@ -31,9 +32,9 @@
           <div class="col-md-3">
             <div class="well">
               <div class="form-group">
-                <!-- <label for="toppingChoice">Choose your topping meat. </label> -->
-                <h4>Choose your topping meat.</h4>
+                <h3>What type of meat would you like?</h3>
                 <select class="form-control" id="toppingChoice">
+                  <option value="blank" id="blank">Choose a meat</option>
                   <option value="pepperoni" id="pepperoni">Pepperoni</option>
                   <option value="ham" id="ham">Ham</option>
                   <option value="sausage" id="sausage">Sausage</option>
@@ -43,7 +44,7 @@
           </div>
           <div class="col-md-3">
             <div class="well">
-              <h4>Hit submit to order a graffiti pizza.</h4>
+              <h3>Hit submit to order a graffiti pizza.</h3>
               <button type="submit" class="btn">Submit!</button>
             </div>
           </div>
@@ -54,7 +55,7 @@
               <div id="pizzaSize"><span class="selectSize"></div>
               <div id="adornment"><span class="selectedTopping"></div>
               <p><span class="toppingChoice"></span></p>
-              <p>The total price of your graffiti pizza will be <span class="price"></span></p>
+              <h4>The total price of your graffiti pizza will be <span class="price"></span></h4>
             </div>
           </div>
       </form>
