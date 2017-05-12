@@ -13,24 +13,30 @@
       <h1>Pizza Graffiti</h1>
         <p>Make your very own pizza art!</p>
         <h2>Choose your size.</h2>
-        <form id="sizeChoice">
+        <form id="pizzaChoice">
           <div class="form-group">
-              <label for="selectSize">Choose your size.</label>
-              <select class="form-control" id="selectSize">
-                <option value="Small" id="small">Small - 8 inch diameter</option>
-                <option value="medium" id="medium">Medium - 10 inch diameter</option>
-                <option value="large" id="large">Large - 12 inch diameter</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="toppingChoice">Choose your topping meat. </label>
-              <select class="form-control" id="toppingChoice">
-                <option value="pepperoni" id="pepperoni">Pepperoni</option>
-                <option value="ham" id="ham">Ham</option>
-                  <option value="sausage" id="sausage">Sausage</option>
-              </select>
-            </div>
+            <label for="selectSize">Choose your size.</label>
+            <select class="form-control" id="selectSize">
+              <option value="Small" id="small">Small - 8 inch diameter</option>
+              <option value="medium" id="medium">Medium - 10 inch diameter</option>
+              <option value="large" id="large">Large - 12 inch diameter</option>
+            </select>
+          </div><!--Class form group close-->
+          <div class="form-group">
+            <label for="toppingChoice">Choose your topping meat. </label>
+            <select class="form-control" id="toppingChoice">
+              <option value="pepperoni" id="pepperoni">Pepperoni</option>
+              <option value="ham" id="ham">Ham</option>
+              <option value="sausage" id="sausage">Sausage</option>
+            </select>
+          </div><!--Class form group close-->
+          <div id="results">
+            <h1>Your pizza order.</h1>
+            <h4 class="selecth4"><strong><span class="selectSize"></strong></h4>
+            <p><span class="toppingChoice"></span></strong> </p>
+            <p>Your pizza order will be <strong><span class="price"></span></strong> </p>
           </form>
-    </div>
+        </div><!--Id reults close-->
+      </div><!--Container close-->
   </body>
 </html>
