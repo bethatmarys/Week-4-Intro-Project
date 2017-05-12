@@ -15,11 +15,12 @@
         <h2>Choose your size.</h2>
         <form id="pizzaChoice">
         <div class="form-group">
-          <label for="selectSize">Choose your size.</label>
+          <label for="selectSize">How hungry are you? Choose your size.</label>
           <select class="form-control" id="selectSize">
             <option value="Small" id="small">Small - 8 inch diameter</option>
-            <option value="medium" id="medium">Medium - 10 inch diameter</option>
-            <option value="large" id="large">Large - 12 inch diameter</option>
+            <option value="medium" id="medium">Medium - 12 inch diameter</option>
+            <option value="large" id="large">Large - 16 inch diameter</option>
+            <!-- <option value="larger" id="larger">Extra large - 20 inch diameter</option> -->
           </select>
       </div><!--Class form group close-->
         <div class="form-group">
@@ -34,10 +35,11 @@
         </div><!--Container close-->
       </form>
       <div id="results">
-        <h1>You have ordered your graffiti pizza.</h1>
-        <h4 class="selecth4"><strong><span class="selectSize"></strong></h4>
+        <h4>You have ordered a graffiti pizza.</h1>
+        <div id="selecth4"><strong><span class="selectSize"></strong></div>
+        <!-- <div id="selecth5"><strong><span class="selectedTopping"></strong></div> -->
         <p><span class="toppingChoice"></span></strong> </p>
-        <p>Your pizza price will be <strong><span class="price"></span></strong> </p>
+        <p>The total price of your graffiti pizza will be <strong><span class="price"></span></strong> </p>
       </div><!--Id reults close-->
 
   </body>

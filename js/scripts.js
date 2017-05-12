@@ -3,29 +3,13 @@ function Pizza(size, topping) {
   this.selectedTopping = topping;
   }
 
-// function Topping(pepperoni, ham, pinapple){
-//   this.pepperoni = pepperoni;
-//   this.ham = ham;
-//   this.pinapple = sausage;
-// }
 
-Pizza.prototype.orderPizza = function() {
-  return "You have chosen " + this.selectedSize + ".";
-  return "You have chosen " + this.selectedTopping + ".";
+Pizza.prototype.orderSize = function() {
+  return "You have selected a " + this.selectedSize + " size pizza.";
 }
-
-// Topping.prototype.orderPizza = function() {
-//   return "You have chosen " + this.selectedTopping + ".";
-// }
-
-// function resetFields() {
-//     $("input#small").val("")
-//     $("input#medium").val("")
-//     $("input#large").val("")
-//     $("input#pepperoni").val("")
-//     $("input#ham").val("")
-//     $("input#sausage").val("")
-// }
+Pizza.prototype.orderTopping = function() {
+  return "You have selected " + this.selectedTopping + " as a topping.";
+}
 $(document).ready(function() {
   $("#pizzaChoice").submit(function(event) {
   event.preventDefault();
@@ -43,6 +27,8 @@ $(document).ready(function() {
     price += 5;
   } else if (size === "large") {
     price += 10;
+  // } else if (size === "exLarge") {
+  //   price += 15;
   }
   if (topping === "pepperoni") {
     price += 4;
@@ -55,11 +41,11 @@ $(document).ready(function() {
 
 $("#results").show();
   // newTicket.movie.forEach(function(movie) {
-    $(".selectSize").text(newPizza.orderPizza());
+    $(".selectSize").text(newPizza.orderSize());
     $(".price").text("$" + price + ".");
-    $(".toppingChoice").text(newPizza.orderPizza());
+    $(".toppingChoice").text(newPizza.orderTopping());
     $(".price").text("$" + price + ".");
-
-    $(".toppingChoice").html("You have chosen a " + "<b>" + topping +  "</b>" + " pizza.");
+//
+    // $(".toppingChoice").html("You have added " + topping + " topping to your pizza.");
   });
 });
