@@ -16,9 +16,7 @@ $(document).ready(function() {
 
   var size = $("select#selectSize").val();
   var topping = $("select#toppingChoice").val();
-
   var newPizza = new Pizza(size, topping);
-
   var price = 10;
 
   if (size === "small") {
@@ -27,9 +25,8 @@ $(document).ready(function() {
     price += 5;
   } else if (size === "large") {
     price += 10;
-  // } else if (size === "exLarge") {
-  //   price += 15;
   }
+
   if (topping === "pepperoni") {
     price += 4;
   } else if (topping === "ham") {
@@ -40,12 +37,10 @@ $(document).ready(function() {
 
 
 $("#results").show();
-  // newTicket.movie.forEach(function(movie) {
     $(".selectSize").text(newPizza.orderSize());
     $(".price").text("$" + price + ".");
     $(".toppingChoice").text(newPizza.orderTopping());
     $(".price").text("$" + price + ".");
-//
     $(".toppingChoice").html("You have added " + topping + " topping to your pizza.");
   });
 });
